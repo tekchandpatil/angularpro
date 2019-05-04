@@ -1,0 +1,26 @@
+.appheader
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.appfooter
+{
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    bottom: 0px;
+    right:0px;
+    width: 100%;
+    z-index: 1;
+}
+.abc
+{
+    position: absolute; /*or fixed*/
+    right: 0px;
+    text-align: center;
+    background-color:cornsilk;
+    box-align: right;
+    width: 35%;
+    height: 73%;
+}
