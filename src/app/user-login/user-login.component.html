@@ -1,0 +1,34 @@
+<div class="container centerpanel">
+  <h1 align="center">Login</h1>
+       <div class="form-group">
+        <table align="center">
+        <tr>
+          <td>
+             <label for="rno">
+               UserName:
+             </label>
+          </td>
+          <td>
+             <input type="text" class="form-control" [(ngModel)]="userName" />
+            <span id="rollNoSpan"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+             <label for="pass">
+               Password:
+             </label>
+          </td>
+          <td>
+              <input type="password" class="form-control"  [(ngModel)]="password" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" class="btn btn-success" (click)="onLogin()" value="Login">
+            <input type="reset" class="btn btn-primary" value="Reset">
+          </td>
+        </tr>
+        </table>
+      </div>
+  </div>	

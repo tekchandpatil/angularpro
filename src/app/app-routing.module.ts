@@ -7,6 +7,7 @@ import { AppPlacementsComponent } from './app-placements/app-placements.componen
 import { UserRegiComponent } from './user-regi/user-regi.component';
 import { FormsModule } from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'app-user-profile',
     component: UserProfileComponent
+  },
+  {
+    path: 'app-user-login',
+    component: UserLoginComponent
   }
 ];
 

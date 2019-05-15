@@ -14,6 +14,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ReadMeComponent } from './read-me/read-me.component';
 import { UserRegiComponent } from './user-regi/user-regi.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     HomepageComponent,
     ReadMeComponent,
     UserRegiComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
