@@ -15,7 +15,7 @@ export class PlacementService {
   }
 
   public getUsers(){
-      return this.http.get('http://localhost:8283/api/pgList').pipe(map((res: Response)=>{
+      return this.http.get('http://localhost:8283/pgDetails/pgList').pipe(map((res: Response)=>{
         console.log("ServicePGLIST=>",res);
           return res;
     }));

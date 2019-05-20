@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PlacementService } from './placement-service/placement.service';
 import { ReadMeService } from './readMe/read-me.service';
-import { UploadImageService } from './upload-image.service';
+
 import * as $ from 'jquery';
 @Component({
   selector: 'app-root',
@@ -11,25 +11,19 @@ import * as $ from 'jquery';
 })
 export class AppComponent implements OnInit{
  
- isSlideImg: boolean=false;
- result: any; 
- portalImages: any;
- noticeList: any;
- portalImagesData: any;
- selectedFile : File; 
- uploadData: any;
- errMsg: any;
- isUpload: boolean=false;
-constructor(private router: Router, private placService: PlacementService,private readMe: ReadMeService,private uploadImg: UploadImageService)
+public isSlideImg: boolean=false;
+public result: any; 
+public portalImages: any;
+public noticeList: any;
+public portalImagesData: any;
+public errMsg: any;
+constructor(private router: Router, private placService: PlacementService,private readMe: ReadMeService)
 {
   
 }
 
   ngOnInit()
   {
-   
-    
-
     this.placService.getPortalImages().subscribe((res: any)=>{  
       this.portalImages=res;
      // this.portalImages=this.portalImagesData.image;
@@ -42,25 +36,7 @@ constructor(private router: Router, private placService: PlacementService,privat
     });
    
   }
-  public onFileUpload(event){
-    this.selectedFile = event.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(this.selectedFile);
-    }
-  public uploadImage()
-  {
-    const uploadFormData = new FormData();
-     uploadFormData.append('file',this.selectedFile);
-      
-      this.uploadImg.uploadImage(uploadFormData).subscribe((res: any)=>{
-        console.log("Service=>",res.body);
-        this.errMsg=res.body;
-        this.isUpload=true;
-        setTimeout(() => {
-          this.isUpload=false;
-        }, 5000);
-      });
-  }
+ 
 
   public showDiv(rout)
   {
@@ -78,8 +54,7 @@ constructor(private router: Router, private placService: PlacementService,privat
   }
 
   public showNoticeDescription(notice){
-    
-    this.readMe.setNoticeDetail(notice);
+     this.readMe.setNoticeDetail(notice);
   }
  
 }
