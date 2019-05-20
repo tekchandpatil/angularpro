@@ -1,0 +1,10 @@
+
+  <table align="centre">
+    <tr>
+      <th *ngIf="isUpload" >{{errMsg}}</th>
+        <th><input type="file" class="form-control" #selectFile (change)="onFileUpload($event)" accept="image/*" required="required"></th>
+        <th><button type="button" (click)="uploadImage()" class="btn btn-primary">Upload</button></th>
+        <th style="color:red;"></th>
+      </tr>
+  </table>
+
