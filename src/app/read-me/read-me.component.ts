@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReadMeService } from '../readMe/read-me.service';
+import { ReadMeService } from '../services/readme-service/read-me.service';
 
 @Component({
   selector: 'app-read-me',
@@ -8,11 +8,15 @@ import { ReadMeService } from '../readMe/read-me.service';
 })
 export class ReadMeComponent implements OnInit {
 
-  notice: any;
-  constructor(private readMe:ReadMeService) { }
+  event_date: any;
+  event_description: any;
+  event_name: any;
+  constructor(private readMeService:ReadMeService) { }
 
   ngOnInit() {
-    this.notice=this.readMe.getNoticeDetail();
+    this.event_date = sessionStorage.getItem("event_date");
+    this.event_description = sessionStorage.getItem("event_description");
+    this.event_name = sessionStorage.getItem("event_name");
   }
     
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
+  public isSlideImg: boolean=false;
 
-
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   
   ngOnInit() {
   }
 
+  // public showDiv(rout)
+  // {
+  //     this.router.navigateByUrl(rout);
+  // }
 }

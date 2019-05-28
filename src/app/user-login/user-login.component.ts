@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserLoginService } from './user-login.service';
+import { UserLoginService } from '../services/user-login-service/user-login.service';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';

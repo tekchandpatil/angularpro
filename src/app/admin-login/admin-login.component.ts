@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UploadImageService } from '../upload-image.service';
+import { UploadImageService } from '../services/upload-image-service/upload-image.service';
 import * as $ from 'jquery';
 
 @Component({

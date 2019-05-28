@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule,Router } from '@angular/router';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppComponent } from './app.component';
@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { PgdetailsComponent } from './pgdetails/pgdetails.component';
+import { ReadMeComponent } from './read-me/read-me.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 const routes: Routes = [
@@ -44,6 +47,18 @@ const routes: Routes = [
   {
     path: 'app-admin-login',
     component: AdminLoginComponent
+  },
+  {
+    path: 'app-pgdetails',
+    component: PgdetailsComponent
+  },
+  {
+    path: 'app-read-me',
+    component: ReadMeComponent
+  },
+  {
+    path: 'app-homepage',
+    component: HomepageComponent
   }
 ];
 

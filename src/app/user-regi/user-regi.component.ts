@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserRegiService } from './user-regi.service';
+import { UserRegiService } from '../services/user-regi-service/user-regi.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -35,7 +35,7 @@ userType: string;
     
     this.userRegi.getUserTypes().subscribe((res: any)=>{
         this.usertypeList=res;
-        console.log(this.usertypeList);
+        console.log("usertypeList",this.usertypeList);
     });
   }
 

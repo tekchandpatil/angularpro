@@ -16,6 +16,7 @@ import { UserRegiComponent } from './user-regi/user-regi.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { PgdetailsComponent } from './pgdetails/pgdetails.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     UserRegiComponent,
     UserProfileComponent,
     UserLoginComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    PgdetailsComponent
   ],
   imports: [
     BrowserModule,

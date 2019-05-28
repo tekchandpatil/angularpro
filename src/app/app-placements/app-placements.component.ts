@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlacementService } from '../placement-service/placement.service';
+import { PortalService } from '../services/portal-service/PortalService.service';
 import { Router } from '@angular/router';
 
 
@@ -14,7 +14,7 @@ export class AppPlacementsComponent implements OnInit {
   
 columnDefs: any;
 rowData: any;
-constructor(private router: Router,private placementService: PlacementService) { 
+constructor(private router: Router) { 
 
 }
 
@@ -23,17 +23,6 @@ constructor(private router: Router,private placementService: PlacementService) {
   ngOnInit() 
   {
 
-    this.columnDefs = [
-      {headerName: 'Id', field: 'id'},
-      {headerName: 'Broker Name', field: 'broker_name'},
-      {headerName: 'Broker Mobile No', field: 'broker_mob_no'},
-      {headerName: 'Location', field: 'location'}
-  ];
-    console.log("PlacementController");
-    this.placementService.getUsers().subscribe((res: any)=>{
-      console.log(res);
-      this.rowData=res;
-    });
   }
 
 }
